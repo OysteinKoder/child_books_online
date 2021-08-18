@@ -1,0 +1,165 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(195, 255, 135);
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+  color:rgb(61, 51, 50);
+  height: 100%;
+  width: 100%;
+}
+
+header {
+text-align: center;
+}
+
+h2 { 
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+
+.Ul-nav {
+  display: flex;
+  background-color: white;
+  justify-content: space-evenly;
+}
+
+.Nav-item {
+  border: black 0.2em solid;
+  border-radius: 20px;
+  background-color: rgb(165, 245, 86);
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  color: black;
+  min-width: 8vh;
+}
+
+.Nav-item:hover {
+  transform: scale(1.4);
+}
+
+.Grid {
+  display: grid;
+  height: 90%;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 0;
+  border: black 0.2em solid;
+  border-radius: 15px;
+}
+
+.Yellow {
+  background-color: yellow;
+}
+
+.Green {
+  background-color: green;
+}
+
+.Lime {
+  background-color: lime;
+}
+
+.Blue {
+  background-color: blue;
+}
+
+.Violet {
+  background-color: violet;
+}
+
+.Red {
+  background-color: red;
+}
+
+.Red-orange {
+  background-color: orange;
+}
+
+.Grid-cell {
+  height: 14vh;
+  width: 14vh;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.Grid-cell:hover{
+  transform: scale(1.3)
+}
+
+.Text-box {
+  /* background-color: white; */
+  width: 39vh;
+  margin: auto;
+  text-align: center;
+}
+
+.Buy-btn {
+  background-color: rgb(165, 245, 86);
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius:20px;
+  border: black 0.2em solid;
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+.Buy-btn:hover{
+  transform: scale(1.2);
+}
+
+.White-box {
+  border: black 0.2em solid;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 0.5em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+
+.Black-box {
+  background-color: black;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 0.5em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  color: white
+}
+
+.Buy-box-grid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.Pricetag-hole {
+  height: 2vh;
+  width: 2vh;
+  background-color:rgb(195, 255, 135) ;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  border: black 0.2em solid;
+}
