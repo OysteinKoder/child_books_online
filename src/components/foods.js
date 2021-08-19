@@ -66,7 +66,7 @@ function Foods () {
         <div>
             <div className="Text-box">
             <h2>Foods</h2>
-            <p>What foods can you see in the boxes below? Tap to find out</p>
+            <p className="Box-text">What foods can you see in the boxes below? Tap to find out</p>
             </div>
             <BoxNumber text="Box One"></BoxNumber>
             <div className="Grid">

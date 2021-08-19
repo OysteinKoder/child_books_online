@@ -52,7 +52,6 @@ h2 {
   margin: auto;
   margin-top: 0;
   border: black 0.2em solid;
-  border-radius: 15px;
 }
 
 .Yellow {
@@ -86,7 +85,7 @@ h2 {
 .Grid-cell {
   height: 14vh;
   width: 14vh;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   object-fit: cover;
 }
 
@@ -99,6 +98,10 @@ h2 {
   width: 39vh;
   margin: auto;
   text-align: center;
+}
+
+.Box-text {
+  margin-top: 0px;
 }
 
 .Buy-btn {
@@ -135,7 +138,7 @@ h2 {
   background-color: black;
   width: fit-content;
   margin: auto;
-  margin-top: 5vh;
+  margin-top: vh;
   border-radius: 25px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
