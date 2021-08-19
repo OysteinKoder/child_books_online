@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/child_books_online/static/css/main.fe58aaa3.chunk.css",
+    "main.css": "/child_books_online/static/css/main.48db4de9.chunk.css",
     "main.js": "/child_books_online/static/js/main.9cab4bba.chunk.js",
     "main.js.map": "/child_books_online/static/js/main.9cab4bba.chunk.js.map",
     "runtime-main.js": "/child_books_online/static/js/runtime-main.3f662ca8.js",
@@ -10,7 +10,7 @@
     "static/js/3.c794e6e1.chunk.js": "/child_books_online/static/js/3.c794e6e1.chunk.js",
     "static/js/3.c794e6e1.chunk.js.map": "/child_books_online/static/js/3.c794e6e1.chunk.js.map",
     "index.html": "/child_books_online/index.html",
-    "static/css/main.fe58aaa3.chunk.css.map": "/child_books_online/static/css/main.fe58aaa3.chunk.css.map",
+    "static/css/main.48db4de9.chunk.css.map": "/child_books_online/static/css/main.48db4de9.chunk.css.map",
     "static/js/2.8ba215c3.chunk.js.LICENSE.txt": "/child_books_online/static/js/2.8ba215c3.chunk.js.LICENSE.txt",
     "static/js/3.c794e6e1.chunk.js.LICENSE.txt": "/child_books_online/static/js/3.c794e6e1.chunk.js.LICENSE.txt",
     "static/media/apple.f9c9f909.mp3": "/child_books_online/static/media/apple.f9c9f909.mp3",
@@ -76,7 +76,7 @@
   "entrypoints": [
     "static/js/runtime-main.3f662ca8.js",
     "static/js/2.8ba215c3.chunk.js",
-    "static/css/main.fe58aaa3.chunk.css",
+    "static/css/main.48db4de9.chunk.css",
     "static/js/main.9cab4bba.chunk.js"
   ]
 }
