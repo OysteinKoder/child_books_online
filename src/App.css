@@ -137,8 +137,6 @@ h2 {
 .Black-box {
   background-color: black;
   width: fit-content;
-  margin: auto;
-  margin-top: vh;
   border-radius: 25px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -148,7 +146,14 @@ h2 {
   padding: 0.5em;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  color: white
+  color: white;
+  margin: auto;
+}
+
+.Center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Buy-box-grid {

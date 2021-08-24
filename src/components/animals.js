@@ -70,7 +70,7 @@ new Audio(ZeebraVoice).play()
 
 function Animals () {
     return(
-        <div> 
+        <div className="Center"> 
             <div className="Text-box">
             <h2>Animals</h2>
             <p className="Box-text">What animals can you see in the pictures below? Click to find out!</p>
