@@ -20,7 +20,6 @@ let playstate = false;
 
 // functions to trigger/stop audio events
 function StopPlay() {
-    if (playstate) {
         myAudioBlue.pause();
         myAudioBlue.currentTime = 0;
         myAudioGreen.pause();
@@ -35,7 +34,6 @@ function StopPlay() {
         myAudioViolet.currentTime = 0;
         myAudioYellow.pause();
         myAudioYellow.currentTime = 0;
-    }
 }
 
 function PlayBlue() {

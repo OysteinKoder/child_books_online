@@ -35,7 +35,6 @@ const myAudioZeebra = new Audio(ZeebraVoice);
 
 // functions to trigger/stop audio events
 function StopPlay() {
-    if (playstate) {
         myAudioCat.pause();
         myAudioCat.currentTime = 0;
         myAudioCow.pause();
@@ -54,7 +53,6 @@ function StopPlay() {
         myAudioSheep.currentTime = 0;
         myAudioZeebra.pause();
         myAudioZeebra.currentTime = 0;
-    }
 }
 
 // Functions for playing audio files

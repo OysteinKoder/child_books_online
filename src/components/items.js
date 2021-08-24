@@ -36,7 +36,6 @@ const myAudioTshirt = new Audio(TshirtVoice);
 
 // functions to stop audio events
 function StopPlay() {
-    if (playstate) {
         myAudioBus.pause();
         myAudioBus.currentTime = 0;
         myAudioCar.pause();
@@ -55,7 +54,6 @@ function StopPlay() {
         myAudioShoes.currentTime = 0;
         myAudioTshirt.pause();
         myAudioTshirt.currentTime = 0;
-    }
 }
 
 // Functions for playing audio files

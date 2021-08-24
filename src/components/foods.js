@@ -33,7 +33,6 @@ const myAudioTaco = new Audio(TacoVoice);
 
 // functions to stop audio events
 function StopPlay() {
-    if (playstate) {
         myAudioApple.pause();
         myAudioApple.currentTime = 0;
         myAudioBanana.pause();
@@ -52,7 +51,6 @@ function StopPlay() {
         myAudioSalad.currentTime = 0;
         myAudioTaco.pause();
         myAudioTaco.currentTime = 0;
-    }
 }
 
 
