@@ -9,7 +9,6 @@ import Pasta from "../img/foods/pasta.jpg"
 import Pizza from "../img/foods/pizza.jpg"
 import Salad from "../img/foods/salad.jpg"
 import Taco from "../img/foods/taco.jpg"
-import useSound from "use-sound"
 import AppleVoice from "../audio/foods/apple.mp3"
 import BananaVoice from "../audio/foods/banana.mp3"
 import BurgerVoice from "../audio/foods/burger.mp3"
@@ -20,44 +19,87 @@ import PizzaVoice from "../audio/foods/pizza.mp3"
 import SaladVoice from "../audio/foods/salad.mp3"
 import TacoVoice from "../audio/foods/taco.mp3"
 
+let playstate = false
 
+const myAudioApple = new Audio(AppleVoice);
+const myAudioBanana = new Audio(BananaVoice);
+const myAudioBurger = new Audio(BurgerVoice);
+const myAudioHotdog = new Audio(HotdogVoice);
+const myAudioKiwi = new Audio(KiwiVoice);
+const myAudioPasta = new Audio(PastaVoice);
+const myAudioPizza = new Audio(PizzaVoice);
+const myAudioSalad = new Audio(SaladVoice);
+const myAudioTaco = new Audio(TacoVoice);
+
+// functions to stop audio events
+function StopPlay() {
+    if (playstate) {
+        myAudioApple.pause();
+        myAudioApple.currentTime = 0;
+        myAudioBanana.pause();
+        myAudioBanana.currentTime = 0;
+        myAudioBurger.pause();
+        myAudioBurger.currentTime = 0;
+        myAudioHotdog.pause();
+        myAudioHotdog.currentTime = 0;
+        myAudioKiwi.pause();
+        myAudioKiwi.currentTime = 0;
+        myAudioPasta.pause();
+        myAudioPasta.currentTime = 0;
+        myAudioPizza.pause();
+        myAudioPizza.currentTime = 0;
+        myAudioSalad.pause();
+        myAudioSalad.currentTime = 0;
+        myAudioTaco.pause();
+        myAudioTaco.currentTime = 0;
+    }
+}
 
 
 function PlayApple () {
-        console.log("hello")
-    new Audio(AppleVoice).play()
+    StopPlay()
+    myAudioApple.play();
+    playstate = !playstate;
 }
 function PlayBanana () {
-    console.log("hello")
-new Audio(BananaVoice).play()
+    StopPlay()
+    myAudioBanana.play();
+    playstate = !playstate;
 }
 function PlayBurger () {
-    console.log("hello")
-new Audio(BurgerVoice).play()
+    StopPlay()
+    myAudioBurger.play();
+    playstate = !playstate;
 }
 function PlayHotdog () {
-    console.log("hello")
-new Audio(HotdogVoice).play()
+    StopPlay()
+    myAudioHotdog.play();
+    playstate = !playstate;
 }
 function PlayKiwi () {
-    console.log("hello")
-new Audio(KiwiVoice).play()
+    StopPlay()
+    myAudioKiwi.play();
+    playstate = !playstate;
 }
 function PlayPasta () {
-    console.log("hello")
-new Audio(PastaVoice).play()
+    StopPlay()
+    myAudioPasta.play();
+    playstate = !playstate;
 }
 function PlayPizza () {
-    console.log("hello")
-new Audio(PizzaVoice).play()
+    StopPlay()
+    myAudioPizza.play();
+    playstate = !playstate;
 }
 function PlaySalad () {
-    console.log("hello")
-new Audio(SaladVoice).play()
+    StopPlay()
+    myAudioSalad.play();
+    playstate = !playstate;
 }
 function PlayTaco () {
-    console.log("hello")
-new Audio(TacoVoice).play()
+    StopPlay()
+    myAudioTaco.play();
+    playstate = !playstate;
 }
 
 

@@ -21,50 +21,95 @@ import RoosterVoice from "../audio/animals/rooster.mp3"
 import SheepVoice from "../audio/animals/sheep.mp3"
 import ZeebraVoice from "../audio/animals/zeebra.mp3"
 
+let playstate = false
+
+const myAudioCat = new Audio(CatVoice);
+const myAudioCow = new Audio(CowVoice);
+const myAudioDog = new Audio(DogVoice);
+const myAudioHippo = new Audio(HippoVoice);
+const myAudioHorse = new Audio(HorseVoice);
+const myAudioLion = new Audio(LionVoice);
+const myAudioRooster = new Audio(RoosterVoice);
+const myAudioSheep = new Audio(SheepVoice);
+const myAudioZeebra = new Audio(ZeebraVoice);
+
+// functions to trigger/stop audio events
+function StopPlay() {
+    if (playstate) {
+        myAudioCat.pause();
+        myAudioCat.currentTime = 0;
+        myAudioCow.pause();
+        myAudioCow.currentTime = 0;
+        myAudioDog.pause();
+        myAudioDog.currentTime = 0;
+        myAudioHippo.pause();
+        myAudioHippo.currentTime = 0;
+        myAudioHorse.pause();
+        myAudioHorse.currentTime = 0;
+        myAudioLion.pause();
+        myAudioLion.currentTime = 0;
+        myAudioRooster.pause();
+        myAudioRooster.currentTime = 0;
+        myAudioSheep.pause();
+        myAudioSheep.currentTime = 0;
+        myAudioZeebra.pause();
+        myAudioZeebra.currentTime = 0;
+    }
+}
+
 // Functions for playing audio files
 function PlayCat () {
-    console.log("hello")
-new Audio(CatVoice).play()
+    StopPlay()
+    myAudioCat.play()
+    playstate = !playstate
 }
 
 function PlayCow () {
-    console.log("hello")
-new Audio(CowVoice).play()
+    StopPlay()
+    myAudioCow.play()
+    playstate = !playstate
 }
 
 function PlayDog () {
-    console.log("hello")
-new Audio(DogVoice).play()
+    StopPlay()
+    myAudioDog.play()
+    playstate = !playstate
 }
 
 function PlayHippo () {
-    console.log("hello")
-new Audio(HippoVoice).play()
+    StopPlay()
+    myAudioHippo.play()
+    playstate = !playstate
 }
 
 function PlayHorse () {
-    console.log("hello")
-new Audio(HorseVoice).play()
+    StopPlay()
+    myAudioHorse.play()
+    playstate = !playstate
 }
 
 function PlayLion () {
-    console.log("hello")
-new Audio(LionVoice).play()
+    StopPlay()
+    myAudioLion.play()
+    playstate = !playstate
 }
 
 function PlayRooster () {
-    console.log("hello")
-new Audio(RoosterVoice).play()
+    StopPlay()
+    myAudioRooster.play()
+    playstate = !playstate
 }
 
 function PlaySheep () {
-    console.log("hello")
-new Audio(SheepVoice).play()
+    StopPlay()
+    myAudioSheep.play()
+    playstate = !playstate
 }
 
 function PlayZeebra () {
-    console.log("hello")
-new Audio(ZeebraVoice).play()
+    StopPlay()
+    myAudioZeebra.play()
+    playstate = !playstate
 }
 
 

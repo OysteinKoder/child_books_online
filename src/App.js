@@ -5,6 +5,7 @@ import Colors from "./components/colors"
 import Items from './components/items';
 import Foods from "./components/foods"
 import BuyBtn from './components/buybtn';
+import NotesRoadmap from './components/notesRoadmap';
 import BoxNumber from './components/boxNumber';
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
@@ -21,8 +22,9 @@ function App() {
         <Route path="/Animals" component={Animals}></Route>
         <Route path="/Items" component={Items}></Route>
         <Route path="/Foods" component={Foods}></Route>
+      <NotesRoadmap></NotesRoadmap>
       </Switch>
-      <BuyBtn text="Box Two:  0.50$" buyText ="Buy"></BuyBtn>
+      <BuyBtn text="Patch Notes/Roadmap" buyText ="Click"></BuyBtn>
     </Router>
   );
 }

@@ -22,50 +22,95 @@ import PlaneVoice from "../audio/items/plane.mp3"
 import ShoesVoice from "../audio/items/shoes.mp3"
 import TshirtVoice from "../audio/items/tshirt.mp3"
 
+let playstate = false
+
+const myAudioBus = new Audio(BusVoice);
+const myAudioCar = new Audio(CarVoice);
+const myAudioChair = new Audio(ChairVoice);
+const myAudioHammer = new Audio(HammerVoice);
+const myAudioHelicopter = new Audio(HelicopterVoice);
+const myAudioPants = new Audio(PantsVoice);
+const myAudioPlane = new Audio(PlaneVoice);
+const myAudioShoes = new Audio(ShoesVoice);
+const myAudioTshirt = new Audio(TshirtVoice);
+
+// functions to stop audio events
+function StopPlay() {
+    if (playstate) {
+        myAudioBus.pause();
+        myAudioBus.currentTime = 0;
+        myAudioCar.pause();
+        myAudioCar.currentTime = 0;
+        myAudioChair.pause();
+        myAudioChair.currentTime = 0;
+        myAudioHammer.pause();
+        myAudioHammer.currentTime = 0;
+        myAudioHelicopter.pause();
+        myAudioHelicopter.currentTime = 0;
+        myAudioPants.pause();
+        myAudioPants.currentTime = 0;
+        myAudioPlane.pause();
+        myAudioPlane.currentTime = 0;
+        myAudioShoes.pause();
+        myAudioShoes.currentTime = 0;
+        myAudioTshirt.pause();
+        myAudioTshirt.currentTime = 0;
+    }
+}
+
 // Functions for playing audio files
 function PlayBus () {
-    console.log("hello")
-new Audio(BusVoice).play()
+    StopPlay()
+    myAudioBus.play();
+    playstate = !playstate;
 }
 
 function PlayCar () {
-    console.log("hello")
-new Audio(CarVoice).play()
+    StopPlay()
+    myAudioCar.play();
+    playstate = !playstate;
 }
 
 function PlayChair () {
-    console.log("hello")
-new Audio(ChairVoice).play()
+    StopPlay()
+    myAudioChair.play();
+    playstate = !playstate;
 }
 
 function PlayHammer () {
-    console.log("hello")
-new Audio(HammerVoice).play()
+    StopPlay()
+    myAudioHammer.play();
+    playstate = !playstate;
 }
 
 function PlayHelicopter () {
-    console.log("hello")
-new Audio(HelicopterVoice).play()
+    StopPlay()
+    myAudioHelicopter.play();
+    playstate = !playstate;
 }
 
 function PlayPants () {
-    console.log("hello")
-new Audio(PantsVoice).play()
+    StopPlay()
+    myAudioPants.play();
+    playstate = !playstate;
 }
 
 function PlayPlane () {
-    console.log("hello")
-new Audio(PlaneVoice).play()
+    StopPlay()
+    myAudioPlane.play();
+    playstate = !playstate;
 }
 
 function PlayShoes () {
-    console.log("hello")
-new Audio(ShoesVoice).play()
+    StopPlay()
+    myAudioShoes.play();
+    playstate = !playstate;
 }
 
 function PlayTshirt () {
-    console.log("hello")
-new Audio(TshirtVoice).play()
+    StopPlay()
+    myAudioTshirt.play();
+    playstate = !playstate;
 }
 
 

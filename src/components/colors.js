@@ -1,82 +1,86 @@
-import React, {useState} from "react"
-import BoxNumber from "./boxNumber"
-
+import React, { useState } from "react";
+import BoxNumber from "./boxNumber";
+import GreenVoice from "../audio/colors/green.mp3";
 // audio imports 
-
-import GreenVoice from "../audio/colors/green.mp3"
-import LimeVoice from "../audio/colors/lime.mp3"
-import RedVoice from "../audio/colors/red.mp3"
-import RedOrangeVoice from "../audio/colors/redorange.mp3"
-import VioletVoice from "../audio/colors/violet.mp3"
-import YellowVoice from "../audio/colors/yellow.mp3"
-// let BlueVoice = new Audio("../audio/colors/blue.mp3")
-
-import BlueVoice from "../audio/colors/blue.mp3"
-const myAudio = new Audio(BlueVoice);
+import LimeVoice from "../audio/colors/lime.mp3";
+import RedVoice from "../audio/colors/red.mp3";
+import RedOrangeVoice from "../audio/colors/redorange.mp3";
+import VioletVoice from "../audio/colors/violet.mp3";
+import YellowVoice from "../audio/colors/yellow.mp3";
+import BlueVoice from "../audio/colors/blue.mp3";
+const myAudioBlue = new Audio(BlueVoice);
+const myAudioGreen = new Audio(GreenVoice);
+const myAudioLime = new Audio(LimeVoice);
+const myAudioRed = new Audio(RedVoice);
+const myAudioRedOrange = new Audio(RedOrangeVoice);
+const myAudioViolet = new Audio(VioletVoice);
+const myAudioYellow = new Audio(YellowVoice);
+// Function to determen if something is playing or not 
 let playstate = false;
-function PlayBlue(){
-if(playstate){
-myAudio.pause();
-myAudio.currentTime = 0;
+
+// functions to trigger/stop audio events
+function StopPlay() {
+    if (playstate) {
+        myAudioBlue.pause();
+        myAudioBlue.currentTime = 0;
+        myAudioGreen.pause();
+        myAudioGreen.currentTime = 0;
+        myAudioLime.pause();
+        myAudioLime.currentTime = 0;
+        myAudioRed.pause();
+        myAudioRed.currentTime = 0;
+        myAudioRedOrange.pause();
+        myAudioRedOrange.currentTime = 0;
+        myAudioViolet.pause();
+        myAudioViolet.currentTime = 0;
+        myAudioYellow.pause();
+        myAudioYellow.currentTime = 0;
+    }
 }
-myAudio.play();
-playstate= !playstate;
+
+function PlayBlue() {
+    StopPlay()
+    myAudioBlue.play();
+    playstate = !playstate;
 }
-
-
-// let playstate = false;
-// function for stopping audio 
-// function StopPlay(state) {
-//     this.BlueVoice.stop()
-//     this.GreenVoice.pause()
-//     LimeVoice.pause()
-//     RedVoice.pause()
-//     RedOrangeVoice.pause()
-//     VioletVoice.pause()
-//     YellowVoice.pause()
-// }
-
-// functions for playing audio 
-// function PlayBlue() {
-//     if (playstate) {
-//         BlueVoice.pause()
-//         BlueVoice.currentTime = 0; 
-//     }
-//     new Audio(BlueVoice).play()
-//     BlueVoice.currentTime = 0; 
-//     playstate = !playstate   
-// }
 
 function PlayGreen() {
-    console.log("hello")
-    new Audio(GreenVoice).play()
+    StopPlay()
+    myAudioGreen.play();
+    playstate = !playstate;
 }
 
 function PlayLime() {
-    console.log("hello")
-    new Audio(LimeVoice).play()
+    StopPlay()
+    myAudioLime.play();
+    playstate = !playstate;
 }
 
 function PlayRed() {
-    console.log("hello")
-    new Audio(RedVoice).play()
+    StopPlay()
+    myAudioRed.play();
+    playstate = !playstate;
 }
 
 function PlayRedOrange() {
-    console.log("hello")
-    new Audio(RedOrangeVoice).play()
+    StopPlay()
+    myAudioRedOrange.play();
+    playstate = !playstate;
 }
 
 function PlayViolet() {
-    console.log("hello")
-    new Audio(VioletVoice).play()
+    StopPlay()
+    myAudioViolet.play();
+    playstate = !playstate;
 }
 
 function PlayYellow() {
-    console.log("hello")
-    new Audio(YellowVoice).play()
+    StopPlay()
+    myAudioYellow.play();
+    playstate = !playstate;
 }
 
+// The component
 function Colors() {
     return (
         <div>
