@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/child_books_online/static/css/main.48db4de9.chunk.css",
-    "main.js": "/child_books_online/static/js/main.9cab4bba.chunk.js",
-    "main.js.map": "/child_books_online/static/js/main.9cab4bba.chunk.js.map",
-    "runtime-main.js": "/child_books_online/static/js/runtime-main.3f662ca8.js",
-    "runtime-main.js.map": "/child_books_online/static/js/runtime-main.3f662ca8.js.map",
-    "static/js/2.8ba215c3.chunk.js": "/child_books_online/static/js/2.8ba215c3.chunk.js",
-    "static/js/2.8ba215c3.chunk.js.map": "/child_books_online/static/js/2.8ba215c3.chunk.js.map",
-    "static/js/3.c794e6e1.chunk.js": "/child_books_online/static/js/3.c794e6e1.chunk.js",
-    "static/js/3.c794e6e1.chunk.js.map": "/child_books_online/static/js/3.c794e6e1.chunk.js.map",
+    "main.css": "/child_books_online/static/css/main.930a24e9.chunk.css",
+    "main.js": "/child_books_online/static/js/main.d096a1f2.chunk.js",
+    "main.js.map": "/child_books_online/static/js/main.d096a1f2.chunk.js.map",
+    "runtime-main.js": "/child_books_online/static/js/runtime-main.2cdde159.js",
+    "runtime-main.js.map": "/child_books_online/static/js/runtime-main.2cdde159.js.map",
+    "static/js/2.5664a5de.chunk.js": "/child_books_online/static/js/2.5664a5de.chunk.js",
+    "static/js/2.5664a5de.chunk.js.map": "/child_books_online/static/js/2.5664a5de.chunk.js.map",
     "index.html": "/child_books_online/index.html",
-    "static/css/main.48db4de9.chunk.css.map": "/child_books_online/static/css/main.48db4de9.chunk.css.map",
-    "static/js/2.8ba215c3.chunk.js.LICENSE.txt": "/child_books_online/static/js/2.8ba215c3.chunk.js.LICENSE.txt",
-    "static/js/3.c794e6e1.chunk.js.LICENSE.txt": "/child_books_online/static/js/3.c794e6e1.chunk.js.LICENSE.txt",
+    "static/css/main.930a24e9.chunk.css.map": "/child_books_online/static/css/main.930a24e9.chunk.css.map",
+    "static/js/2.5664a5de.chunk.js.LICENSE.txt": "/child_books_online/static/js/2.5664a5de.chunk.js.LICENSE.txt",
     "static/media/apple.f9c9f909.mp3": "/child_books_online/static/media/apple.f9c9f909.mp3",
     "static/media/banana.617ec45f.mp3": "/child_books_online/static/media/banana.617ec45f.mp3",
     "static/media/blue.d36f072b.mp3": "/child_books_online/static/media/blue.d36f072b.mp3",
@@ -74,9 +71,9 @@
     "static/media/zeebra.fae64f8c.mp3": "/child_books_online/static/media/zeebra.fae64f8c.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f662ca8.js",
-    "static/js/2.8ba215c3.chunk.js",
-    "static/css/main.48db4de9.chunk.css",
-    "static/js/main.9cab4bba.chunk.js"
+    "static/js/runtime-main.2cdde159.js",
+    "static/js/2.5664a5de.chunk.js",
+    "static/css/main.930a24e9.chunk.css",
+    "static/js/main.d096a1f2.chunk.js"
   ]
 }
