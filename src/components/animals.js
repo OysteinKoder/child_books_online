@@ -2,20 +2,18 @@ import React, { useEffect } from "react";
 import BoxNumber from "./boxNumber";
 import { animalData } from "../data/animalData";
 
-let playstate = false;
-
 const audioElements = Object.keys(animalData).reduce((acc, key) => {
   acc[key] = new Audio(animalData[key].audio);
   return acc;
 }, {});
 
 // functions to trigger/stop audio events
-function StopPlay() {
+const StopPlay = () => {
   Object.values(audioElements).forEach((audio) => {
     audio.pause();
     audio.currentTime = 0;
   });
-}
+};
 
 // Add CSS for animations
 const styles = {
@@ -43,22 +41,23 @@ const addJiggleKeyframes = () => {
 };
 
 // Function for playing audio files
-function playAnimal(animal) {
+const playAnimal = (animal) => {
   StopPlay();
   animateAnimal(animal);
   audioElements[animal].play();
-  playstate = !playstate;
-}
+};
 
-function animateAnimal(animal) {
-  const img = document.querySelector(`img[alt="${animal}"]`);
-  img.style.animation = "jiggle 0.5s infinite";
-  setTimeout(() => {
-    img.style.animation = "";
-  }, audioElements[animal].duration * 1000); // Adjust duration based on audio length
-}
+const animateAnimal = (animal) => {
+  const img = document.querySelector(`img[alt="${animalData[animal].alt}"]`);
+  if (img) {
+    img.style.animation = "jiggle 0.5s infinite";
+    setTimeout(() => {
+      img.style.animation = "";
+    }, audioElements[animal].duration * 1000); // Adjust duration based on audio length
+  }
+};
 
-function Animals() {
+const Animals = () => {
   useEffect(() => {
     addJiggleKeyframes();
   }, []);
@@ -71,21 +70,21 @@ function Animals() {
           What animals can you see in the pictures below? Click to find out!
         </p>
       </div>
-      <BoxNumber text="Box One"></BoxNumber>
+      <BoxNumber text="Box One" />
       <div className="Grid">
-        {Object.keys(animalData).map((animal) => (
+        {Object.keys(animalData).map((animal, idx) => (
           <img
             key={animal}
             className="Grid-cell"
             src={animalData[animal].image}
-            alt={animal}
+            alt={animalData[animal].alt}
             onClick={() => playAnimal(animal)}
             style={styles.gridCell}
-          ></img>
+          />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Animals;

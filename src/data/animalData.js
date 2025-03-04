@@ -22,37 +22,46 @@ export const animalData = {
   cat: {
     image: Cat,
     audio: CatVoice,
+    alt: "katt",
   },
   chicken: {
     image: Chicken,
     audio: RoosterVoice,
+    alt: "Kylling",
   },
   cow: {
     image: Cow,
     audio: CowVoice,
+    alt: "Ku",
   },
   dog: {
     image: Dog,
     audio: DogVoice,
+    alt: "Hund",
   },
   hippo: {
     image: Hippo,
     audio: HippoVoice,
+    alt: "Flodhest",
   },
   horse: {
     image: Horse,
     audio: HorseVoice,
+    alt: "Hest",
   },
   lion: {
     image: Lion,
     audio: LionVoice,
+    alt: "Løve",
   },
   sheep: {
     image: Sheep,
     audio: SheepVoice,
+    alt: "Sau",
   },
   zebra: {
     image: Zebra,
     audio: ZeebraVoice,
+    alt: "Zebra",
   },
 };
