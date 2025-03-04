@@ -42,63 +42,13 @@ const addJiggleKeyframes = () => {
   document.head.appendChild(styleSheet);
 };
 
-// Functions for playing audio files
-const playFunctions = {
-  cat: () => {
-    StopPlay();
-    animateAnimal("cat");
-    audioElements.cat.play();
-    playstate = !playstate;
-  },
-  cow: () => {
-    StopPlay();
-    animateAnimal("cow");
-    audioElements.cow.play();
-    playstate = !playstate;
-  },
-  dog: () => {
-    StopPlay();
-    animateAnimal("dog");
-    audioElements.dog.play();
-    playstate = !playstate;
-  },
-  hippo: () => {
-    StopPlay();
-    animateAnimal("hippo");
-    audioElements.hippo.play();
-    playstate = !playstate;
-  },
-  horse: () => {
-    StopPlay();
-    animateAnimal("horse");
-    audioElements.horse.play();
-    playstate = !playstate;
-  },
-  lion: () => {
-    StopPlay();
-    animateAnimal("lion");
-    audioElements.lion.play();
-    playstate = !playstate;
-  },
-  chicken: () => {
-    StopPlay();
-    animateAnimal("chicken");
-    audioElements.chicken.play();
-    playstate = !playstate;
-  },
-  sheep: () => {
-    StopPlay();
-    animateAnimal("sheep");
-    audioElements.sheep.play();
-    playstate = !playstate;
-  },
-  zebra: () => {
-    StopPlay();
-    animateAnimal("zebra");
-    audioElements.zebra.play();
-    playstate = !playstate;
-  },
-};
+// Function for playing audio files
+function playAnimal(animal) {
+  StopPlay();
+  animateAnimal(animal);
+  audioElements[animal].play();
+  playstate = !playstate;
+}
 
 function animateAnimal(animal) {
   const img = document.querySelector(`img[alt="${animal}"]`);
@@ -129,7 +79,7 @@ function Animals() {
             className="Grid-cell"
             src={animalData[animal].image}
             alt={animal}
-            onClick={playFunctions[animal]}
+            onClick={() => playAnimal(animal)}
             style={styles.gridCell}
           ></img>
         ))}
