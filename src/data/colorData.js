@@ -6,6 +6,8 @@ import VioletVoice from "../audio/colors/violet.mp3";
 import YellowVoice from "../audio/colors/yellow.mp3";
 import BlueVoice from "../audio/colors/blue.mp3";
 
+// spill inn paa nytt
+// mangler, grønn, gul, brun,rosa
 export const colorData = {
   yellow: {
     audio: YellowVoice,
