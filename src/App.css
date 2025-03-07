@@ -2,24 +2,23 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgb(195, 255, 135);
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin: 0 auto;
-  color:rgb(61, 51, 50);
+  color: rgb(61, 51, 50);
   height: 100vh;
   width: 100vw;
 }
 
 header {
-text-align: center;
+  text-align: center;
 }
 
-h2 { 
+h2 {
   text-align: center;
   margin-bottom: 0px;
 }
-
 
 .Ul-nav {
   display: flex;
@@ -55,31 +54,38 @@ h2 {
 }
 
 .Yellow {
-  background-color: yellow;
+  background-color: #ffeb3b; /* Bright Yellow */
 }
 
+.Purple {
+  background-color: #9c27b0; /* Fun Purple */
+}
 .Green {
-  background-color: green;
-}
-
-.Lime {
-  background-color: lime;
+  background-color: #7adc39; /* Bright Lime */
 }
 
 .Blue {
-  background-color: blue;
+  background-color: #2196f3; /* Bright Blue */
 }
 
-.Violet {
-  background-color: violet;
+.Brown {
+  background-color: #a84405; /* Fun Brown */
 }
 
 .Red {
-  background-color: red;
+  background-color: #f44336; /* Bright Red */
 }
 
-.Red-orange {
-  background-color: orange;
+.Orange {
+  background-color: #ff8922; /* Bright Red-Orange */
+}
+
+.Black {
+  background-color: #212121; /* Fun Black */
+}
+
+.Grey {
+  background-color: #9e9e9e; /* Fun Grey */
 }
 
 .Grid-cell {
@@ -89,8 +95,8 @@ h2 {
   object-fit: cover;
 }
 
-.Grid-cell:hover{
-  transform: scale(1.3)
+.Grid-cell:hover {
+  transform: scale(1.3);
 }
 
 .Text-box {
@@ -119,13 +125,13 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 0.5em;
-  border-radius:20px;
+  border-radius: 20px;
   border: black 0.2em solid;
   margin: 0;
   margin-left: 0.5em;
 }
 
-.Buy-btn:hover{
+.Buy-btn:hover {
   transform: scale(1.2);
 }
 
@@ -137,7 +143,7 @@ h2 {
   margin-top: 5vh;
   border-radius: 25px;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   text-align: center;
   padding: 0.5em;
   padding-top: 0.7em;
@@ -152,13 +158,11 @@ h2 {
   margin-top: 1em;
   border-radius: 25px;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   padding: 0.5em;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
 }
-
-
 
 .Black-box {
   background-color: black;
@@ -167,7 +171,7 @@ h2 {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   text-align: center;
   padding: 0.5em;
   padding-top: 0.7em;
@@ -193,7 +197,7 @@ h2 {
 .Pricetag-hole {
   height: 2vh;
   width: 2vh;
-  background-color:rgb(195, 255, 135) ;
+  background-color: rgb(195, 255, 135);
   border-radius: 50%;
   margin-right: 0.5em;
   border: black 0.2em solid;

@@ -1,4 +1,3 @@
-import GreenVoice from "../audio/colors/green.mp3";
 import LimeVoice from "../audio/colors/lime.mp3";
 import RedVoice from "../audio/colors/red.mp3";
 import RedOrangeVoice from "../audio/colors/redorange.mp3";
@@ -6,35 +5,41 @@ import VioletVoice from "../audio/colors/violet.mp3";
 import YellowVoice from "../audio/colors/yellow.mp3";
 import BlueVoice from "../audio/colors/blue.mp3";
 
-// spill inn paa nytt
-// mangler, grønn, gul, brun,rosa
 export const colorData = {
+  red: {
+    audio: RedVoice,
+    className: "Red",
+  },
+  Orange: {
+    audio: RedOrangeVoice,
+    className: "Orange",
+  },
   yellow: {
     audio: YellowVoice,
     className: "Yellow",
   },
-  lime: {
-    audio: LimeVoice,
-    className: "Lime",
-  },
   green: {
-    audio: GreenVoice,
+    audio: null,
     className: "Green",
   },
   blue: {
     audio: BlueVoice,
     className: "Blue",
   },
-  violet: {
-    audio: VioletVoice,
-    className: "Violet",
+  purple: {
+    audio: null,
+    className: "Purple",
   },
-  red: {
-    audio: RedVoice,
-    className: "Red",
+  brown: {
+    audio: null,
+    className: "Brown",
   },
-  redOrange: {
-    audio: RedOrangeVoice,
-    className: "Red-orange",
+  black: {
+    audio: null,
+    className: "Black",
+  },
+  grey: {
+    audio: null,
+    className: "Grey",
   },
 };
