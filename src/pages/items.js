@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import BoxNumber from "./boxNumber";
-import { colorData } from "../data/colorData";
+import BoxNumber from "../components/boxNumber";
+import { itemData } from "../data/itemData";
 
-const audioElements = Object.keys(colorData).reduce((acc, key) => {
-  acc[key] = new Audio(colorData[key].audio);
+// audio imports
+const audioElements = Object.keys(itemData).reduce((acc, key) => {
+  acc[key] = new Audio(itemData[key].audio);
   return acc;
 }, {});
 
@@ -41,26 +42,23 @@ const addJiggleKeyframes = () => {
 };
 
 // Function for playing audio files
-const playColor = (color) => {
+const playItem = (item) => {
   StopPlay();
-  animateColor(color);
-  audioElements[color].play();
+  animateItem(item);
+  audioElements[item].play();
 };
 
-const animateColor = (color) => {
-  const div = document.querySelector(
-    `.Grid-cell.${colorData[color].className}`
-  );
-  if (div) {
-    div.style.animation = "jiggle 0.5s infinite";
+const animateItem = (item) => {
+  const img = document.querySelector(`img[alt="${itemData[item].alt}"]`);
+  if (img) {
+    img.style.animation = "jiggle 0.5s infinite";
     setTimeout(() => {
-      div.style.animation = "";
-    }, audioElements[color].duration * 1000); // Adjust duration based on audio length
+      img.style.animation = "";
+    }, audioElements[item].duration * 1000); // Adjust duration based on audio length
   }
 };
 
-// The component
-const Colors = () => {
+const Items = () => {
   useEffect(() => {
     addJiggleKeyframes();
   }, []);
@@ -68,24 +66,26 @@ const Colors = () => {
   return (
     <div>
       <div className="Text-box">
-        <h2>Colors</h2>
+        <h2>Items</h2>
         <p className="Box-text">
-          What colors can you see in the boxes below? Tap to find out
+          What are these items called? Tap on the picture to find out!
         </p>
       </div>
       <BoxNumber text="Box One" />
       <div className="Grid">
-        {Object.keys(colorData).map((color) => (
-          <div
-            key={color}
-            className={`Grid-cell ${colorData[color].className}`}
-            onClick={() => playColor(color)}
+        {Object.keys(itemData).map((item) => (
+          <img
+            key={item}
+            className="Grid-cell"
+            src={itemData[item].image}
+            alt={itemData[item].alt}
+            onClick={() => playItem(item)}
             style={styles.gridCell}
-          ></div>
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export default Colors;
+export default Items;

@@ -1,15 +1,12 @@
-import './App.css';
-import NavBar from './components/navBar';
-import Animals from "./components/animals"
-import Colors from "./components/colors"
-import Items from './components/items';
-import Foods from "./components/foods"
-import BuyBtn from './components/buybtn';
-import NotesRoadmap from './components/notesRoadmap';
-import BoxNumber from './components/boxNumber';
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
-
-
+import "./App.css";
+import NavBar from "./components/navBar";
+import Animals from "./pages/animals";
+import Colors from "./pages/colors";
+import Items from "./pages/items";
+import Foods from "./pages/foods";
+import BuyBtn from "./components/buybtn";
+import NotesRoadmap from "./components/notesRoadmap";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -22,9 +19,9 @@ function App() {
         <Route path="/Animals" component={Animals}></Route>
         <Route path="/Items" component={Items}></Route>
         <Route path="/Foods" component={Foods}></Route>
-      <NotesRoadmap></NotesRoadmap>
+        <NotesRoadmap></NotesRoadmap>
       </Switch>
-      <BuyBtn text="Patch Notes/Roadmap" buyText ="Click"></BuyBtn>
+      <BuyBtn text="Patch Notes/Roadmap" buyText="Click"></BuyBtn>
     </Router>
   );
 }

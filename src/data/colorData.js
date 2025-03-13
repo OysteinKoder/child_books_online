@@ -1,7 +1,5 @@
-import LimeVoice from "../audio/colors/lime.mp3";
 import RedVoice from "../audio/colors/red.mp3";
 import RedOrangeVoice from "../audio/colors/redorange.mp3";
-import VioletVoice from "../audio/colors/violet.mp3";
 import YellowVoice from "../audio/colors/yellow.mp3";
 import BlueVoice from "../audio/colors/blue.mp3";
 

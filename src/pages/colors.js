@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import BoxNumber from "./boxNumber";
-import { animalData } from "../data/animalData";
+import BoxNumber from "../components/boxNumber";
+import { colorData } from "../data/colorData";
 
-const audioElements = Object.keys(animalData).reduce((acc, key) => {
-  acc[key] = new Audio(animalData[key].audio);
+const audioElements = Object.keys(colorData).reduce((acc, key) => {
+  acc[key] = new Audio(colorData[key].audio);
   return acc;
 }, {});
 
@@ -41,50 +41,51 @@ const addJiggleKeyframes = () => {
 };
 
 // Function for playing audio files
-const playAnimal = (animal) => {
+const playColor = (color) => {
   StopPlay();
-  animateAnimal(animal);
-  audioElements[animal].play();
+  animateColor(color);
+  audioElements[color].play();
 };
 
-const animateAnimal = (animal) => {
-  const img = document.querySelector(`img[alt="${animalData[animal].alt}"]`);
-  if (img) {
-    img.style.animation = "jiggle 0.5s infinite";
+const animateColor = (color) => {
+  const div = document.querySelector(
+    `.Grid-cell.${colorData[color].className}`
+  );
+  if (div) {
+    div.style.animation = "jiggle 0.5s infinite";
     setTimeout(() => {
-      img.style.animation = "";
-    }, audioElements[animal].duration * 1000); // Adjust duration based on audio length
+      div.style.animation = "";
+    }, audioElements[color].duration * 1000); // Adjust duration based on audio length
   }
 };
 
-const Animals = () => {
+// The component
+const Colors = () => {
   useEffect(() => {
     addJiggleKeyframes();
   }, []);
 
   return (
-    <div className="Center">
+    <div>
       <div className="Text-box">
-        <h2>Animals</h2>
+        <h2>Colors</h2>
         <p className="Box-text">
-          What animals can you see in the pictures below? Click to find out!
+          What colors can you see in the boxes below? Tap to find out
         </p>
       </div>
       <BoxNumber text="Box One" />
       <div className="Grid">
-        {Object.keys(animalData).map((animal, idx) => (
-          <img
-            key={animal}
-            className="Grid-cell"
-            src={animalData[animal].image}
-            alt={animalData[animal].alt}
-            onClick={() => playAnimal(animal)}
+        {Object.keys(colorData).map((color) => (
+          <div
+            key={color}
+            className={`Grid-cell ${colorData[color].className}`}
+            onClick={() => playColor(color)}
             style={styles.gridCell}
-          />
+          ></div>
         ))}
       </div>
     </div>
   );
 };
 
-export default Animals;
+export default Colors;

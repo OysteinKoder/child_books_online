@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import BoxNumber from "./boxNumber";
-import { itemData } from "../data/itemData";
+import BoxNumber from "../components/boxNumber";
+import { animalData } from "../data/animalData";
 
-// audio imports
-const audioElements = Object.keys(itemData).reduce((acc, key) => {
-  acc[key] = new Audio(itemData[key].audio);
+const audioElements = Object.keys(animalData).reduce((acc, key) => {
+  acc[key] = new Audio(animalData[key].audio);
   return acc;
 }, {});
 
@@ -42,44 +41,44 @@ const addJiggleKeyframes = () => {
 };
 
 // Function for playing audio files
-const playItem = (item) => {
+const playAnimal = (animal) => {
   StopPlay();
-  animateItem(item);
-  audioElements[item].play();
+  animateAnimal(animal);
+  audioElements[animal].play();
 };
 
-const animateItem = (item) => {
-  const img = document.querySelector(`img[alt="${itemData[item].alt}"]`);
+const animateAnimal = (animal) => {
+  const img = document.querySelector(`img[alt="${animalData[animal].alt}"]`);
   if (img) {
     img.style.animation = "jiggle 0.5s infinite";
     setTimeout(() => {
       img.style.animation = "";
-    }, audioElements[item].duration * 1000); // Adjust duration based on audio length
+    }, audioElements[animal].duration * 1000); // Adjust duration based on audio length
   }
 };
 
-const Items = () => {
+const Animals = () => {
   useEffect(() => {
     addJiggleKeyframes();
   }, []);
 
   return (
-    <div>
+    <div className="Center">
       <div className="Text-box">
-        <h2>Items</h2>
+        <h2>Animals</h2>
         <p className="Box-text">
-          What are these items called? Tap on the picture to find out!
+          What animals can you see in the pictures below? Click to find out!
         </p>
       </div>
       <BoxNumber text="Box One" />
       <div className="Grid">
-        {Object.keys(itemData).map((item) => (
+        {Object.keys(animalData).map((animal, idx) => (
           <img
-            key={item}
+            key={animal}
             className="Grid-cell"
-            src={itemData[item].image}
-            alt={itemData[item].alt}
-            onClick={() => playItem(item)}
+            src={animalData[animal].image}
+            alt={animalData[animal].alt}
+            onClick={() => playAnimal(animal)}
             style={styles.gridCell}
           />
         ))}
@@ -88,4 +87,4 @@ const Items = () => {
   );
 };
 
-export default Items;
+export default Animals;
